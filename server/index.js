@@ -12,7 +12,7 @@ const app = express()
 // Connect to database
 connectDB()
 
-app.use(cors())
+app.use(cors({ origin: 'http://localhost:3000/' }))
 app.get('/', (req, res) => {
 	res.send('App running on heroku successfully')
 })
